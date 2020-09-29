@@ -1,0 +1,119 @@
+﻿@model IEnumerable<PhoneSmart.Models.PhoneModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Manufacturer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ram)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DisplayType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DisplaySize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefreshRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Processor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainCam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondaryCam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrontCam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Battery)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Security)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isWirelessCharge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isWaterResist)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ram)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisplayType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisplaySize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefreshRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Processor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainCam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryCam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrontCam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Battery)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Security)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isWirelessCharge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isWaterResist)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PhoneModelId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PhoneModelId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PhoneModelId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,104 @@
+﻿@model PhoneSmart.Models.PhoneModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>PhoneModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PhoneModelId" />
+            <div class="form-group">
+                <label asp-for="Manufacturer" class="control-label"></label>
+                <input asp-for="Manufacturer" class="form-control" />
+                <span asp-validation-for="Manufacturer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model" class="control-label"></label>
+                <input asp-for="Model" class="form-control" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OS" class="control-label"></label>
+                <input asp-for="OS" class="form-control" />
+                <span asp-validation-for="OS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ram" class="control-label"></label>
+                <input asp-for="Ram" class="form-control" />
+                <span asp-validation-for="Ram" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DisplayType" class="control-label"></label>
+                <input asp-for="DisplayType" class="form-control" />
+                <span asp-validation-for="DisplayType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DisplaySize" class="control-label"></label>
+                <input asp-for="DisplaySize" class="form-control" />
+                <span asp-validation-for="DisplaySize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RefreshRate" class="control-label"></label>
+                <input asp-for="RefreshRate" class="form-control" />
+                <span asp-validation-for="RefreshRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Processor" class="control-label"></label>
+                <input asp-for="Processor" class="form-control" />
+                <span asp-validation-for="Processor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MainCam" class="control-label"></label>
+                <input asp-for="MainCam" class="form-control" />
+                <span asp-validation-for="MainCam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondaryCam" class="control-label"></label>
+                <input asp-for="SecondaryCam" class="form-control" />
+                <span asp-validation-for="SecondaryCam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FrontCam" class="control-label"></label>
+                <input asp-for="FrontCam" class="form-control" />
+                <span asp-validation-for="FrontCam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Battery" class="control-label"></label>
+                <input asp-for="Battery" class="form-control" />
+                <span asp-validation-for="Battery" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Security" class="control-label"></label>
+                <input asp-for="Security" class="form-control" />
+                <span asp-validation-for="Security" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="isWirelessCharge" /> @Html.DisplayNameFor(model => model.isWirelessCharge)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="isWaterResist" /> @Html.DisplayNameFor(model => model.isWaterResist)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
