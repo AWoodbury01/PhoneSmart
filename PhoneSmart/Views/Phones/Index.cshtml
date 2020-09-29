@@ -7,9 +7,31 @@
 <p>
     <a asp-action="Create">Post New Phone</a>
 </p>
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name: <input class="form-control form-control-sm"
+                                 type="text"
+                                 name="SearchString"
+                                 value="@ViewData["CurrentFilter"]"
+                                 placeholder="Ex: Apple, iPhone 11" />
+        </p>
+        @*<p>
+                <input type="submit" value="Search" class="btn btn-default" asp-controller="Phone" asp-action="Index" />
+
+            </p>*@
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneModel.Manufacturer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneModel.Model)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Color)
             </th>
@@ -18,12 +40,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Condition)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhoneModel.Manufacturer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhoneModel.Model)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.User.FirstName)
@@ -36,6 +52,13 @@
         {
 <tr>
     <td>
+        @Html.DisplayFor(modelItem => item.PhoneModel.Manufacturer)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PhoneModel.Model)
+    </td>
+
+    <td>
         @Html.DisplayFor(modelItem => item.Color)
     </td>
     <td>
@@ -45,12 +68,6 @@
         @Html.DisplayFor(modelItem => item.Condition)
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.PhoneModel.Manufacturer)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.PhoneModel.Model)
-    </td>
-    <td>
         @Html.DisplayFor(modelItem => item.User.FirstName)
     </td>
     <td>
@@ -58,7 +75,6 @@
         <a asp-action="Details" asp-route-id="@item.PhoneId">Details</a> |
         <a asp-action="Delete" asp-route-id="@item.PhoneId">Delete</a>
     </td>
-</tr>
-}
+</tr>}
     </tbody>
 </table>

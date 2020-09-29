@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PhoneSmart.Data;
 using PhoneSmart.Models;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -23,10 +24,32 @@ namespace PhoneSmart.Controllers
         private Task<ApplicationUser> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
 
         // GET: Phones
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var applicationDbContext = _context.Phone.Include(t => t.PhoneModel).Include(t => t.User);
-            return View(await _context.Phone.ToListAsync());
+            //Search function
+            ViewData["CurrentFilter"] = searchString;
+
+            var applicationDbContext = _context.Phone
+            .Include(p => p.PhoneModel)
+            .Include(p => p.User)
+            .AsQueryable();
+
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                applicationDbContext = applicationDbContext
+                    .Where(p => p.PhoneModel.Manufacturer.Contains(searchString)
+                    ||
+                    p.PhoneModel.Model.Contains(searchString));
+            }
+            if (applicationDbContext.Count() < 1)
+            {
+
+                return View("SearchError");
+            }
+
+            return View(await applicationDbContext.ToListAsync());
+            //return View(await _context.Phone.ToListAsync());
         }
 
         // GET: Phones/Details/5
@@ -38,6 +61,8 @@ namespace PhoneSmart.Controllers
             }
 
             var phone = await _context.Phone
+                .Include(p => p.PhoneModel)
+                .Include(p => p.User)
                 .FirstOrDefaultAsync(m => m.PhoneId == id);
             if (phone == null)
             {
