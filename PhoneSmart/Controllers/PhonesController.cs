@@ -72,6 +72,12 @@ namespace PhoneSmart.Controllers
             return View(phone);
         }
 
+        public async Task<IActionResult> Compare()
+        {
+            ViewData["PhoneModelId"] = new SelectList(_context.PhoneModel, "PhoneModelId", "Model");
+            return View("Compare");
+        }
+
         // GET: Phones/Create
         public IActionResult Create()
         {
