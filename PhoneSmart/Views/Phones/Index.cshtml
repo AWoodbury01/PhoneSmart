@@ -23,7 +23,8 @@
     </div>
 </form>
 
-<table class="table">
+
+@*<table class="table">
     <thead>
         <tr>
             <th>
@@ -47,34 +48,52 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.PhoneModel.Manufacturer)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.PhoneModel.Model)
-    </td>
+    <tbody>*@
 
-    <td>
-        @Html.DisplayFor(modelItem => item.Color)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Storage)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Condition)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.User.FirstName)
-    </td>
-    <td>
-        <a asp-action="Edit" asp-route-id="@item.PhoneId">Edit</a> |
-        <a asp-action="Details" asp-route-id="@item.PhoneId">Details</a> |
-        <a asp-action="Delete" asp-route-id="@item.PhoneId">Delete</a>
-    </td>
-</tr>}
+@foreach (var item in Model)
+{
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">User: @Html.DisplayFor(modelItem => item.PhoneModel.Manufacturer)  @Html.DisplayFor(modelItem => item.PhoneModel.Model)</h5>
+        <p class="card-text">@Html.DisplayFor(modelItem => item.User.FirstName)</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Html.DisplayNameFor(model => model.Color): @Html.DisplayFor(modelItem => item.Color)</li>
+        <li class="list-group-item">@Html.DisplayNameFor(model => model.Storage): @Html.DisplayFor(modelItem => item.Storage)</li>
+        <li class="list-group-item">@Html.DisplayNameFor(model => model.Condition): @Html.DisplayFor(modelItem => item.Condition)</li>
+    </ul>
+    <div class="card-body">
+        <a class="card-link" asp-action="Edit" asp-route-id="@item.PhoneId">Edit</a>
+        <a class="card-link" asp-action="Details" asp-route-id="@item.PhoneId">Details</a>
+        <a class="card-link" asp-action="Delete" asp-route-id="@item.PhoneId">Delete</a>
+    </div>
+</div> @*<tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneModel.Manufacturer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneModel.Model)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Storage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Condition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.FirstName)
+        </td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@item.PhoneId">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.PhoneId">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.PhoneId">Delete</a>
+        </td>
+    </tr>*@}
     </tbody>
 </table>
