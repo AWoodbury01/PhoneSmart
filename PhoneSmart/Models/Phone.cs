@@ -10,6 +10,7 @@
         public int PhoneModelId { get; set; }
         public ApplicationUser User { get; set; }
         public PhoneModel PhoneModel { get; set; }
+        public object ViewBag { get; }
 
     }
 }

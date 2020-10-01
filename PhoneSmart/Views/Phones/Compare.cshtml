@@ -1,22 +1,52 @@
-﻿@model PhoneSmart.Models.Phone
+﻿@model PhoneSmart.Models.PhoneViewModels.PhoneCompareViewModel
 @{ ViewData["Compare"] = "Compare"; }
 
 <h1>Compare</h1>
 <div class="container">
     <hr />
     <h3>Phone 1</h3>
-    <div class="form-group">
-        <label asp-for="PhoneModelId" class="control-label"></label>
-        <select asp-for="PhoneModelId" class="form-control" asp-items="ViewBag.PhoneModelId"></select>
-    </div>
+    @*<div class="form-group">
+            <label asp-for="PhoneModelId" class="control-label"></label>
+            <select asp-for="PhoneModelId" class="form-control" asp-items="ViewBag.PhoneModelId"></select>
+        </div>*@
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.PhoneModel.Manufacturer)
+    </dt>
+    <dd class="col-sm-10">
+        @ViewBag.Manufacturer
+
+        @*@Html.DisplayFor(model => model.PhoneModel.Manufacturer)*@
+    </dd>
+
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.PhoneModel.Model)
+    </dt>
+    <dd class="col-sm-10">
+        @ViewBag.Model
+        @*@Html.DisplayFor(model => model.PhoneModel.Model)*@
+    </dd>
+
 
 </div>
 <div class="container">
     <hr />
     <h3>Phone 2</h3>
-    <div class="form-group">
-        <label asp-for="PhoneModelId" class="control-label"></label>
-        <select asp-for="PhoneModelId" class="form-control" asp-items="ViewBag.PhoneModelId"></select>
-    </div>
+    @*<div class="form-group">
+            <label asp-for="PhoneModelId" class="control-label"></label>
+            <select asp-for="PhoneModelId" class="form-control" asp-items="ViewBag.PhoneModelId"></select>
+        </div>*@
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.PhoneModel.Manufacturer)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.PhoneModel.Manufacturer)
+    </dd>
+
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.PhoneModel.Model)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.PhoneModel.Model)
+    </dd>
 
 </div>

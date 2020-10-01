@@ -9,6 +9,7 @@ namespace PhoneSmart.Models.PhoneViewModels
         public IEnumerable<PhoneModel> ComparePhoneModelOne { get; set; }
         public IEnumerable<PhoneModel> ComparePhoneModelTwo { get; set; }
 
-
+        public Phone Phone { get; set; }
+        public PhoneModel PhoneModel { get; set; }
     }
 }
