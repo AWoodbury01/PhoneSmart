@@ -1,28 +1,46 @@
 ﻿@model PhoneSmart.Models.PhoneViewModels.PhoneCompareViewModel
 @{ ViewData["comparePhones"] = "Compare"; }
-@*<p>@Model.PhoneOne.Manufacturer</p>*@
 
-<div class="heading-container">
+@*<p>@Model.PhoneOne.Manufacturer</p>*@
+@*<div class="form-group">
+        <label asp-for="PhoneDropdownOne" class="control-label"></label>
+        <select asp-for="PhoneDropdownOne" class="form-control" asp-items="PhoneDropdownOne"></select>
+    </div>*@
+@*<hr />*@
+
+
+@* Heading *@
+<div class="container heading-container">
     <div class="heading-title w-50 mx-auto">
         <h1 class="d-flex justify-content-center mx-auto">Compare</h1>
     </div>
 </div>
 
+@* Dropdown *@
+<div class="container dropdown-container d-flex justify-content-around">
+    @* Dropdown Phone One *@
+    <div class="btn-group w-35">
+        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Large button
+        </button>
+        <div class="dropdown-menu">
+            ...
+        </div>
+    </div>
 
-<h1>Compare</h1>
-
-<div class="container">
-    <hr />
-    <h3>Phone 1</h3>
-    @*<div class="form-group">
-            <label asp-for="PhoneDropdownOne" class="control-label"></label>
-            <select asp-for="PhoneDropdownOne" class="form-control" asp-items="PhoneDropdownOne"></select>
-        </div>*@
-
-    <p>@Model.PhoneOne.Model</p>
+    @* Dropdown Phone Two *@
+    <div class="btn-group w-35">
+        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Large button
+        </button>
+        <div class="dropdown-menu">
+            ...
+        </div>
+    </div>
 </div>
 
-<div class="container">
-    <hr />
-    <h3>Phone 2</h3>
+@* Phone Image *@
+<div class="container phone-image-container d-flex justify-content-around">
+    <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174fa0c5c2a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174fa0c5c2a%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2274.421875%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="rounded float-left" alt="...">
+    <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174fa0c5c2a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174fa0c5c2a%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2274.421875%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="rounded float-right" alt="...">
 </div>
