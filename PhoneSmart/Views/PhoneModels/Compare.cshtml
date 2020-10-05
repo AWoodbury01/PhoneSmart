@@ -1,0 +1,28 @@
+﻿@model PhoneSmart.Models.PhoneViewModels.PhoneCompareViewModel
+@{ ViewData["comparePhones"] = "Compare"; }
+@*<p>@Model.PhoneOne.Manufacturer</p>*@
+
+<div class="heading-container">
+    <div class="heading-title w-50 mx-auto">
+        <h1 class="d-flex justify-content-center mx-auto">Compare</h1>
+    </div>
+</div>
+
+
+<h1>Compare</h1>
+
+<div class="container">
+    <hr />
+    <h3>Phone 1</h3>
+    @*<div class="form-group">
+            <label asp-for="PhoneDropdownOne" class="control-label"></label>
+            <select asp-for="PhoneDropdownOne" class="form-control" asp-items="PhoneDropdownOne"></select>
+        </div>*@
+
+    <p>@Model.PhoneOne.Model</p>
+</div>
+
+<div class="container">
+    <hr />
+    <h3>Phone 2</h3>
+</div>

@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PhoneSmart.Data;
 using PhoneSmart.Models;
-using PhoneSmart.Models.PhoneViewModels;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -73,28 +72,6 @@ namespace PhoneSmart.Controllers
             return View(phone);
         }
 
-        public async Task<IActionResult> Compare()
-        {
-            ViewData["PhoneModelId"] = new SelectList(_context.PhoneModel, "PhoneModelId", "Model");
-            //ViewData["PhoneModel"] = new ViewContext();
-
-
-            var applicationDbContext = _context.Phone
-                .Include(p => p.PhoneModel)
-                .Include(p => p.User);
-
-
-
-            ViewBag.PhoneModelID = 1;
-
-            var ComparePhones = new PhoneCompareViewModel
-            {
-                ComparePhoneModelOne = ViewBag.PhoneModel.PhoneModelID = 1,
-                ComparePhoneModelTwo = ViewBag.PhoneModel.PhoneModelID = 2
-            };
-
-            return View(ComparePhones);
-        }
 
         // GET: Phones/Create
         public IActionResult Create()
