@@ -72,6 +72,7 @@ namespace PhoneSmart.Controllers
             return View(phone);
         }
 
+
         // GET: Phones/Create
         public IActionResult Create()
         {

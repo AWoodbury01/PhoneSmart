@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PhoneSmart.Data;
 using PhoneSmart.Models;
+using PhoneSmart.Models.PhoneViewModels;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -26,6 +29,25 @@ namespace PhoneSmart.Controllers
         {
             return View(await _context.PhoneModel.ToListAsync());
         }
+
+        public async Task<IActionResult> Compare()
+        {
+
+            List<PhoneModel> comparePhones = await _context.PhoneModel.ToListAsync();
+
+
+            PhoneCompareViewModel vm = new PhoneCompareViewModel();
+
+            vm.PhoneDropdownOne = new SelectList(_context.PhoneModel, "PhoneModelId", "Model");
+            vm.PhoneDropdownTwo = new SelectList(_context.PhoneModel, "PhoneModelId", "Model");
+
+
+            vm.PhoneOne = comparePhones[3];
+            vm.PhoneTwo = comparePhones[4];
+
+            return View(vm);
+        }
+
 
         // GET: PhoneModels/Details/5
         public async Task<IActionResult> Details(int? id)
