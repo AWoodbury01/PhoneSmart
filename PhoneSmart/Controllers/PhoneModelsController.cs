@@ -42,8 +42,8 @@ namespace PhoneSmart.Controllers
             vm.PhoneDropdownTwo = new SelectList(_context.PhoneModel, "PhoneModelId", "Model");
 
 
-            vm.PhoneOne = comparePhones[3];
-            vm.PhoneTwo = comparePhones[4];
+            vm.PhoneOne = comparePhones[7];
+            vm.PhoneTwo = comparePhones[5];
 
             return View(vm);
         }

@@ -19,7 +19,7 @@
 @* Dropdown *@
 <div class="container dropdown-container d-flex justify-content-around mb-4">
     @* Dropdown Phone One *@
-    <div class="btn-group w-35">
+    <div id="dropdown-one" class="btn-group w-35">
         <select class="btn btn-secondary btn-lg dropdown-toggle" asp-for="PhoneOne.PhoneModelId" asp-items="@Model.PhoneDropdownOne" aria-haspopup="true" aria-expanded="false"></select>
     </div>
 
@@ -27,7 +27,7 @@
     <div class="w-25">   </div>
 
     @* Dropdown Phone Two *@
-    <div class="btn-group w-35">
+    <div id="dropdown-two" class="btn-group w-35">
         <select class="btn btn-secondary btn-lg dropdown-toggle" asp-for="PhoneOne.PhoneModelId" asp-items="@Model.PhoneDropdownOne" aria-haspopup="true" aria-expanded="false"></select>
     </div>
 </div>
@@ -37,15 +37,15 @@
 
     @* Phone One *@
     <div class="w-25 h-75 d-inline-block">
-        <img src="@Model.PhoneOne.PhoneURL" class="rounded d-flex justify-content-center mx-auto " alt="...">
+        <img src="@Model.PhoneOne.PhoneURL" class="img-fluid rounded d-flex justify-content-center mx-auto " alt="...">
     </div>
 
     @* Divider *@
-    <div class="w-25">   </div>
+    <div class="w-25 h-75 d-inline-block">   </div>
 
     @* Phone Two *@
     <div class="w-25 h-75 d-inline-block">
-        <img src="@Model.PhoneTwo.PhoneURL" class="rounded d-flex justify-content-center mx-auto" alt="...">
+        <img src="@Model.PhoneTwo.PhoneURL" class="img-fluid rounded d-flex justify-content-center mx-auto" alt="...">
 
     </div>
 
@@ -69,7 +69,7 @@
 
         @* Description *@
         <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Operating System</p>
+            <p class="d-flex justify-content-center mx-auto">Operating System</p>
         </div>
 
         @*Phone Two*@
@@ -289,17 +289,17 @@
 
         @* Phone One *@
         <div class="sec-cam-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.SecondaryCam</p>
+            <p class="d-flex justify-content-center mx-auto">@Model.PhoneOne.SecondaryCam</p>
         </div>
 
         @*Description*@
         <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Secondary Camera</p>
+            <p class="d-flex justify-content-center mx-auto">Secondary Camera</p>
         </div>
 
         @* Phone Two *@
         <div class="sec-cam-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.SecondaryCam</p>
+            <p class="d-flex justify-content-center mx-auto">@Model.PhoneTwo.SecondaryCam</p>
         </div>
     </div>
 
