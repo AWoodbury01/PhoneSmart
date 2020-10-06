@@ -78,6 +78,11 @@
                 <input asp-for="Security" class="form-control" />
                 <span asp-validation-for="Security" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="PhoneURL" class="control-label"></label>
+                <input asp-for="PhoneURL" class="form-control" />
+                <span asp-validation-for="PhoneURL" class="text-danger"></span>
+            </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="isWirelessCharge" /> @Html.DisplayNameFor(model => model.isWirelessCharge)

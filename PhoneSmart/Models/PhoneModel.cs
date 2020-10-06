@@ -18,5 +18,6 @@
         public string Security { get; set; }
         public bool isWirelessCharge { get; set; }
         public bool isWaterResist { get; set; }
+        public string PhoneURL { get; set; }
     }
 }

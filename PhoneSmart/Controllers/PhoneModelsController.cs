@@ -78,7 +78,7 @@ namespace PhoneSmart.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PhoneModelId,Manufacturer,Model,OS,Ram,DisplayType,DisplaySize,RefreshRate,Processor,MainCam,SecondaryCam,FrontCam,Battery,Security,isWirelessCharge,isWaterResist")] PhoneModel phoneModel)
+        public async Task<IActionResult> Create([Bind("PhoneModelId,Manufacturer,Model,OS,Ram,DisplayType,DisplaySize,RefreshRate,Processor,MainCam,SecondaryCam,FrontCam,Battery,Security,isWirelessCharge,isWaterResist,PhoneURL")] PhoneModel phoneModel)
         {
             if (ModelState.IsValid)
             {
@@ -110,7 +110,7 @@ namespace PhoneSmart.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PhoneModelId,Manufacturer,Model,OS,Ram,DisplayType,DisplaySize,RefreshRate,Processor,MainCam,SecondaryCam,FrontCam,Battery,Security,isWirelessCharge,isWaterResist")] PhoneModel phoneModel)
+        public async Task<IActionResult> Edit(int id, [Bind("PhoneModelId,Manufacturer,Model,OS,Ram,DisplayType,DisplaySize,RefreshRate,Processor,MainCam,SecondaryCam,FrontCam,Battery,Security,isWirelessCharge,isWaterResist,PhoneURL")] PhoneModel phoneModel)
         {
             if (id != phoneModel.PhoneModelId)
             {

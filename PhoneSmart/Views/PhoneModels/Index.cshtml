@@ -52,6 +52,9 @@
                 @Html.DisplayNameFor(model => model.Security)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.PhoneURL)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.isWirelessCharge)
             </th>
             <th>
@@ -61,59 +64,63 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Manufacturer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Model)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OS)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ram)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DisplayType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DisplaySize)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RefreshRate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Processor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MainCam)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SecondaryCam)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FrontCam)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Battery)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Security)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.isWirelessCharge)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.isWaterResist)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.PhoneModelId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PhoneModelId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PhoneModelId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Manufacturer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OS)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ram)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DisplayType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DisplaySize)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RefreshRate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Processor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MainCam)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SecondaryCam)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FrontCam)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Battery)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Security)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneURL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.isWirelessCharge)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.isWaterResist)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.PhoneModelId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.PhoneModelId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.PhoneModelId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
