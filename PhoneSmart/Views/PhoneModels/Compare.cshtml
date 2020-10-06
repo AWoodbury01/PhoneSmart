@@ -20,17 +20,7 @@
 <div class="container dropdown-container d-flex justify-content-around mb-4">
     @* Dropdown Phone One *@
     <div class="btn-group w-35">
-        @*<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Large button
-            </button>*@
-        @*<div class="dropdown-menu">
-                @foreach (var phone in Model.PhoneDropdownOne)
-                {
-            <a>@phone</a>}
-            </div>*@
-        @*@Html.DropDownList("PhoneDropdownOne", null, new { @class = "btn btn-default dropdown-toggle" })*@
         <select class="btn btn-secondary btn-lg dropdown-toggle" asp-for="PhoneOne.PhoneModelId" asp-items="@Model.PhoneDropdownOne" aria-haspopup="true" aria-expanded="false"></select>
-
     </div>
 
     @* Divider *@
@@ -38,12 +28,7 @@
 
     @* Dropdown Phone Two *@
     <div class="btn-group w-35">
-        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Large button
-        </button>
-        <div class="dropdown-menu">
-            ...
-        </div>
+        <select class="btn btn-secondary btn-lg dropdown-toggle" asp-for="PhoneOne.PhoneModelId" asp-items="@Model.PhoneDropdownOne" aria-haspopup="true" aria-expanded="false"></select>
     </div>
 </div>
 
