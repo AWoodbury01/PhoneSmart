@@ -20,13 +20,21 @@
 <div class="container dropdown-container d-flex justify-content-around mb-4">
     @* Dropdown Phone One *@
     <div class="btn-group w-35">
-        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Large button
-        </button>
-        <div class="dropdown-menu">
-            ...
-        </div>
+        @*<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Large button
+            </button>*@
+        @*<div class="dropdown-menu">
+                @foreach (var phone in Model.PhoneDropdownOne)
+                {
+            <a>@phone</a>}
+            </div>*@
+        @*@Html.DropDownList("PhoneDropdownOne", null, new { @class = "btn btn-default dropdown-toggle" })*@
+        <select class="btn btn-secondary btn-lg dropdown-toggle" asp-for="PhoneOne.PhoneModelId" asp-items="@Model.PhoneDropdownOne" aria-haspopup="true" aria-expanded="false"></select>
+
     </div>
+
+    @* Divider *@
+    <div class="w-25">   </div>
 
     @* Dropdown Phone Two *@
     <div class="btn-group w-35">
@@ -40,9 +48,22 @@
 </div>
 
 @* Phone Image *@
-<div class="container phone-image-container d-flex justify-content-around mb-4">
-    <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174fa0c5c2a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174fa0c5c2a%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2274.421875%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="rounded float-left" alt="...">
-    <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174fa0c5c2a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174fa0c5c2a%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2274.421875%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="rounded float-right" alt="...">
+<div class="container phone-image-container d-flex justify-content-around mb-lg-5">
+
+    @* Phone One *@
+    <div class="w-25">
+        <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174fa0c5c2a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174fa0c5c2a%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2274.421875%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="rounded d-flex justify-content-center mx-auto" alt="...">
+    </div>
+
+    @* Divider *@
+    <div class="w-25">   </div>
+
+    @* Phone Two *@
+    <div class="w-25">
+        <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174fa0c5c2a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174fa0c5c2a%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2274.421875%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="rounded d-flex justify-content-center mx-auto" alt="...">
+
+    </div>
+
 </div>
 
 @* OS Heading *@
@@ -182,7 +203,7 @@
 
         @*Description*@
         <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Processor</p>
+            <p class="d-flex justify-content-center">Ram</p>
         </div>
 
         @* Phone Two *@
@@ -201,7 +222,7 @@
 
         @*Description*@
         <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Processor</p>
+            <p class="d-flex justify-content-center">Battery</p>
         </div>
 
         @* Phone Two *@
@@ -220,7 +241,7 @@
 
         @*Description*@
         <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Processor</p>
+            <p class="d-flex justify-content-center">Wireless Charge</p>
         </div>
 
         @* Phone Two *@
@@ -229,12 +250,22 @@
         </div>
     </div>
 
+    @* Water Resist *@
     <div class="container d-flex justify-content-around">
-        <div class="iswater-container-one">
-            <p>@Model.PhoneOne.isWaterResist</p>
+
+        @* Phone One *@
+        <div class="iswater-container-one w-25">
+            <p class="d-flex justify-content-center">@Model.PhoneOne.isWaterResist</p>
         </div>
-        <div class="iswater-container-two">
-            <p>@Model.PhoneTwo.isWaterResist</p>
+
+        @*Description*@
+        <div class="os-descrip-container-one font-weight-light w-25">
+            <p class="d-flex justify-content-center">Water Resistant</p>
+        </div>
+
+        @* Phone Two *@
+        <div class="iswater-container-two w-25">
+            <p class="d-flex justify-content-center">@Model.PhoneTwo.isWaterResist</p>
         </div>
     </div>
 </div>
@@ -248,28 +279,61 @@
 
 @* Camera content *@
 <div class="container camera-container mb-4">
+
+    @* Main Cam *@
     <div class="container d-flex justify-content-around">
-        <div class="main-camera-container-one">
-            <p>@Model.PhoneOne.MainCam</p>
+
+        @* Phone One *@
+        <div class="main-camera-container-one w-25">
+            <p class="d-flex justify-content-center">@Model.PhoneOne.MainCam</p>
         </div>
-        <div class="main-camera-container-two">
-            <p>@Model.PhoneTwo.MainCam</p>
+
+        @*Description*@
+        <div class="os-descrip-container-one font-weight-light w-25">
+            <p class="d-flex justify-content-center">Main Camera</p>
+        </div>
+
+        @* Phone Two *@
+        <div class="main-camera-container-two w-25">
+            <p class="d-flex justify-content-center">@Model.PhoneTwo.MainCam</p>
         </div>
     </div>
+
+    @* Secondary Cam *@
     <div class="container d-flex justify-content-around">
-        <div class="sec-cam-container-one">
-            <p>@Model.PhoneOne.SecondaryCam</p>
+
+        @* Phone One *@
+        <div class="sec-cam-container-one w-25">
+            <p class="d-flex justify-content-center">@Model.PhoneOne.SecondaryCam</p>
         </div>
-        <div class="sec-cam-container-two">
-            <p>@Model.PhoneTwo.SecondaryCam</p>
+
+        @*Description*@
+        <div class="os-descrip-container-one font-weight-light w-25">
+            <p class="d-flex justify-content-center">Secondary Camera</p>
+        </div>
+
+        @* Phone Two *@
+        <div class="sec-cam-container-two w-25">
+            <p class="d-flex justify-content-center">@Model.PhoneTwo.SecondaryCam</p>
         </div>
     </div>
+
+    @* Front Cam *@
     <div class="container d-flex justify-content-around">
-        <div class="front-cam-container-one">
-            <p>@Model.PhoneOne.FrontCam</p>
+
+        @* Phone One *@
+        <div class="front-cam-container-one w-25">
+            <p class="d-flex justify-content-center">@Model.PhoneOne.FrontCam</p>
         </div>
-        <div class="front-cam-container-two">
-            <p>@Model.PhoneTwo.FrontCam</p>
+
+        @*Description*@
+        <div class="os-descrip-container-one font-weight-light w-25">
+            <p class="d-flex justify-content-center">Front Camera</p>
+        </div>
+
+        @* Phone Two *@
+        <div class="front-cam-container-two w-25">
+            <p class="d-flex justify-content-center">@Model.PhoneTwo.FrontCam</p>
         </div>
     </div>
 </div>
@@ -284,11 +348,20 @@
 @* Security content *@
 <div class="container camera-container mb-4">
     <div class="container d-flex justify-content-around">
-        <div class="security-container-one">
-            <p>@Model.PhoneOne.Security</p>
+
+        @* Phone One *@
+        <div class="security-container-one w-25">
+            <p class="d-flex justify-content-center">@Model.PhoneOne.Security</p>
         </div>
-        <div class="security-container-two">
-            <p>@Model.PhoneTwo.Security</p>
+
+        @*Description*@
+        <div class="os-descrip-container-one font-weight-light w-25">
+            <p class="d-flex justify-content-center">Type</p>
+        </div>
+
+        @* Phone Two *@
+        <div class="security-container-two w-25">
+            <p class="d-flex justify-content-center">@Model.PhoneTwo.Security</p>
         </div>
     </div>
 </div>
