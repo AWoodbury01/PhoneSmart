@@ -11,7 +11,7 @@
 
 @* Heading *@
 <div class="container heading-container">
-    <div class="heading-title w-50 mx-auto mt-3 mb-4">
+    <div class="heading-title w-50 mx-auto mt-5 mb-5">
         <h1 class="d-flex justify-content-center mx-auto">Compare</h1>
     </div>
 </div>
@@ -19,7 +19,7 @@
 @* Dropdown *@
 <div class="container dropdown-container d-flex justify-content-around mb-4">
     @* Dropdown Phone One *@
-    <div class="btn-group w-35">
+    <div id="dropdown-one" class="btn-group w-35">
         <select class="btn btn-secondary btn-lg dropdown-toggle" asp-for="PhoneOne.PhoneModelId" asp-items="@Model.PhoneDropdownOne" aria-haspopup="true" aria-expanded="false"></select>
     </div>
 
@@ -27,25 +27,25 @@
     <div class="w-25">   </div>
 
     @* Dropdown Phone Two *@
-    <div class="btn-group w-35">
+    <div id="dropdown-two" class="btn-group w-35">
         <select class="btn btn-secondary btn-lg dropdown-toggle" asp-for="PhoneOne.PhoneModelId" asp-items="@Model.PhoneDropdownOne" aria-haspopup="true" aria-expanded="false"></select>
     </div>
 </div>
 
 @* Phone Image *@
-<div class="container phone-image-container d-flex justify-content-around mb-lg-5">
+<div class="container phone-image-container d-flex justify-content-around mb-lg-5 mt-lg-5">
 
     @* Phone One *@
-    <div class="w-25">
-        <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174fa0c5c2a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174fa0c5c2a%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2274.421875%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="rounded d-flex justify-content-center mx-auto" alt="...">
+    <div class="w-25 h-75 d-inline-block">
+        <img src="@Model.PhoneOne.PhoneURL" class="img-fluid rounded d-flex justify-content-center mx-auto " alt="...">
     </div>
 
     @* Divider *@
-    <div class="w-25">   </div>
+    <div class="w-25 h-75 d-inline-block">   </div>
 
     @* Phone Two *@
-    <div class="w-25">
-        <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174fa0c5c2a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174fa0c5c2a%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2274.421875%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="rounded d-flex justify-content-center mx-auto" alt="...">
+    <div class="w-25 h-75 d-inline-block">
+        <img src="@Model.PhoneTwo.PhoneURL" class="img-fluid rounded d-flex justify-content-center mx-auto" alt="...">
 
     </div>
 
@@ -69,7 +69,7 @@
 
         @* Description *@
         <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Operating System</p>
+            <p class="d-flex justify-content-center mx-auto">Operating System</p>
         </div>
 
         @*Phone Two*@
@@ -289,17 +289,17 @@
 
         @* Phone One *@
         <div class="sec-cam-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.SecondaryCam</p>
+            <p class="d-flex justify-content-center mx-auto">@Model.PhoneOne.SecondaryCam</p>
         </div>
 
         @*Description*@
         <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Secondary Camera</p>
+            <p class="d-flex justify-content-center mx-auto">Secondary Camera</p>
         </div>
 
         @* Phone Two *@
         <div class="sec-cam-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.SecondaryCam</p>
+            <p class="d-flex justify-content-center mx-auto">@Model.PhoneTwo.SecondaryCam</p>
         </div>
     </div>
 

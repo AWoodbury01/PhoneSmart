@@ -42,8 +42,8 @@ namespace PhoneSmart.Controllers
             vm.PhoneDropdownTwo = new SelectList(_context.PhoneModel, "PhoneModelId", "Model");
 
 
-            vm.PhoneOne = comparePhones[3];
-            vm.PhoneTwo = comparePhones[4];
+            vm.PhoneOne = comparePhones[0];
+            vm.PhoneTwo = comparePhones[1];
 
             return View(vm);
         }
@@ -78,7 +78,7 @@ namespace PhoneSmart.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PhoneModelId,Manufacturer,Model,OS,Ram,DisplayType,DisplaySize,RefreshRate,Processor,MainCam,SecondaryCam,FrontCam,Battery,Security,isWirelessCharge,isWaterResist")] PhoneModel phoneModel)
+        public async Task<IActionResult> Create([Bind("PhoneModelId,Manufacturer,Model,OS,Ram,DisplayType,DisplaySize,RefreshRate,Processor,MainCam,SecondaryCam,FrontCam,Battery,Security,isWirelessCharge,isWaterResist,PhoneURL")] PhoneModel phoneModel)
         {
             if (ModelState.IsValid)
             {
@@ -110,7 +110,7 @@ namespace PhoneSmart.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PhoneModelId,Manufacturer,Model,OS,Ram,DisplayType,DisplaySize,RefreshRate,Processor,MainCam,SecondaryCam,FrontCam,Battery,Security,isWirelessCharge,isWaterResist")] PhoneModel phoneModel)
+        public async Task<IActionResult> Edit(int id, [Bind("PhoneModelId,Manufacturer,Model,OS,Ram,DisplayType,DisplaySize,RefreshRate,Processor,MainCam,SecondaryCam,FrontCam,Battery,Security,isWirelessCharge,isWaterResist,PhoneURL")] PhoneModel phoneModel)
         {
             if (id != phoneModel.PhoneModelId)
             {
