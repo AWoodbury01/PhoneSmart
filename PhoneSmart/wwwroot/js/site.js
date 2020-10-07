@@ -3,6 +3,13 @@
 
 // Write your JavaScript code.
 
+// Phone One
+
+// Phone One Image
+const PhoneOneImage = singlePhone => {
+    return `<img id="compare-image" src="${singlePhone.phoneURL}" class="img-fluid rounded d-flex justify-content-center mx-auto " alt="...">`
+}
+
 // Dropdown One
 document.getElementById('dropdown-one').addEventListener('change', function () {
     console.log('You selected: ', event.target.value);
@@ -12,6 +19,8 @@ document.getElementById('dropdown-one').addEventListener('change', function () {
         .then((phoneforCompareOne) => {
 
             console.log(phoneforCompareOne)
+
+            document.querySelector("#compare-image").innerHTML = PhoneOneImage(phoneforCompareOne);
         })
 });
 // Dropdown Two
