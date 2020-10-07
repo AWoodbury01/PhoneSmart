@@ -39,8 +39,23 @@
     @foreach (var item in Model)
     {
 
-<div class="card mb-lg-5" style="width: 18rem; height: 25rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+
+<div class="card mb-lg-5" style="width: 18rem; height: 26rem;">
+    @* Phone Image *@
+    <div class="post-card-image-container"
+         style="        width: 18rem;
+        height: 8rem;
+        overflow: hidden;
+    ">
+        <img style="
+
+            "
+             class="card-img-top "
+             src="@item.PhoneModel.PhoneURL"
+             alt="Card image cap">
+    </div>
+
+    @* Post Body *@
     <div class="card-body">
         <h5 class="card-title">User: @Html.DisplayFor(modelItem => item.PhoneModel.Manufacturer)  @Html.DisplayFor(modelItem => item.PhoneModel.Model)</h5>
         <p class="card-text">@Html.DisplayFor(modelItem => item.User.FirstName)</p>
