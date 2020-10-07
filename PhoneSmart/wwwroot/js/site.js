@@ -9,5 +9,5 @@ document.getElementById('dropdown-one').addEventListener('change', function () {
 
     // Dropdown Two
 }); document.getElementById('dropdown-two').addEventListener('change', function () {
-    console.log('You selected: ', vm.PhoneTwo.PhoneModelId);
+    console.log('You selected: ', event.target.value);
 });

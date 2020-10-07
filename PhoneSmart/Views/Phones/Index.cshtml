@@ -2,58 +2,44 @@
 
 @{ ViewData["Title"] = "Index"; }
 
-<h1>Phones</h1>
-
-<p>
-    <a asp-action="Create">Post New Phone</a>
-</p>
-<form asp-action="Index" method="get">
-    <div class="form-actions no-color">
-        <p>
-            Find by name: <input class="form-control form-control-sm"
-                                 type="text"
-                                 name="SearchString"
-                                 value="@ViewData["CurrentFilter"]"
-                                 placeholder="Ex: Apple, iPhone 11" />
-        </p>
-        @*<p>
-                <input type="submit" value="Search" class="btn btn-default" asp-controller="Phone" asp-action="Index" />
-
-            </p>*@
+@* Heading *@
+<div class="container heading-container">
+    <div class="heading-title w-50 mx-auto mt-5 mb-5">
+        <h1 class="d-flex justify-content-center mx-auto">Phones</h1>
     </div>
-</form>
+</div>
+
+@* Create & Search *@
+<div class="container d-flex justify-content-between mb-5">
+    <div>
+        <p>
+            <a asp-action="Create">Post New Phone</a>
+        </p>
+    </div>
+    <div>
+        <form asp-action="Index" method="get">
+            <div class="form-actions no-color">
+                <p>
+                    Search by Phone <input class="form-control form-control-sm"
+                                           type="text"
+                                           name="SearchString"
+                                           value="@ViewData["CurrentFilter"]"
+                                           placeholder="Ex: Apple, iPhone 11" />
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
 
 
-@*<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.PhoneModel.Manufacturer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhoneModel.Model)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Color)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Storage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Condition)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User.FirstName)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>*@
+@* Posts *@
+<div class="container d-flex justify-content-around flex-wrap w-75" style="        height: auto;
+  position: relative;
+">
+    @foreach (var item in Model)
+    {
 
-@foreach (var item in Model)
-{
-
-<div class="card" style="width: 18rem;">
+<div class="card mb-lg-5" style="width: 18rem; height: 25rem;">
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
         <h5 class="card-title">User: @Html.DisplayFor(modelItem => item.PhoneModel.Manufacturer)  @Html.DisplayFor(modelItem => item.PhoneModel.Model)</h5>
@@ -64,36 +50,10 @@
         <li class="list-group-item">@Html.DisplayNameFor(model => model.Storage): @Html.DisplayFor(modelItem => item.Storage)</li>
         <li class="list-group-item">@Html.DisplayNameFor(model => model.Condition): @Html.DisplayFor(modelItem => item.Condition)</li>
     </ul>
-    <div class="card-body">
+    <div class="card-body d-flex justify-content-center">
         <a class="card-link" asp-action="Edit" asp-route-id="@item.PhoneId">Edit</a>
         <a class="card-link" asp-action="Details" asp-route-id="@item.PhoneId">Details</a>
         <a class="card-link" asp-action="Delete" asp-route-id="@item.PhoneId">Delete</a>
     </div>
-</div> @*<tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhoneModel.Manufacturer)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhoneModel.Model)
-        </td>
-
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Storage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Condition)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.User.FirstName)
-        </td>
-        <td>
-            <a asp-action="Edit" asp-route-id="@item.PhoneId">Edit</a> |
-            <a asp-action="Details" asp-route-id="@item.PhoneId">Details</a> |
-            <a asp-action="Delete" asp-route-id="@item.PhoneId">Delete</a>
-        </td>
-    </tr>*@}
-    </tbody>
-</table>
+</div>}
+</div>
