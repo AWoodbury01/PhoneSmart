@@ -7,7 +7,14 @@
 document.getElementById('dropdown-one').addEventListener('change', function () {
     console.log('You selected: ', event.target.value);
 
-    // Dropdown Two
-}); document.getElementById('dropdown-two').addEventListener('change', function () {
+    fetch(`/PhoneModels/CompareViewOne/${event.target.value}`)
+        .then(r => r.json())
+        .then((phoneforCompareOne) => {
+
+            console.log(phoneforCompareOne)
+        })
+});
+// Dropdown Two
+document.getElementById('dropdown-two').addEventListener('change', function () {
     console.log('You selected: ', event.target.value);
 });
