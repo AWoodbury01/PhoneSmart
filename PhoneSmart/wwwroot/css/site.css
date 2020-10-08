@@ -77,3 +77,12 @@ body {
 post-card-image-container::-webkit-scrollbar {
     display: none;
 }
+
+html {
+    background-color: white;
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
