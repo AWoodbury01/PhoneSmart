@@ -8,7 +8,6 @@
     </div>*@
 @*<hr />*@
 
-
 @* Heading *@
 <div class="container heading-container">
     <div class="heading-title w-50 mx-auto mt-5 mb-5">
@@ -32,321 +31,326 @@
     </div>
 </div>
 
-@* Phone Image *@
-<div class="container phone-image-container d-flex justify-content-around mb-lg-5 mt-lg-5">
 
-    @* Phone One *@
-    <div id="compare-image" class="w-25 h-75 d-inline-block">
-        @*<img src="@Model.PhoneOne.PhoneURL" class="img-fluid rounded d-flex justify-content-center mx-auto " alt="...">*@
-    </div>
+@* Printing Container *@
+<div id="printing-container">
 
-    @* Divider *@
-    <div class="w-25 h-75 d-inline-block">   </div>
-
-    @* Phone Two *@
-    <div class="w-25 h-75 d-inline-block">
-        <img src="@Model.PhoneTwo.PhoneURL" class="img-fluid rounded d-flex justify-content-center mx-auto" alt="...">
-
-    </div>
-
-</div>
-
-@* OS Heading *@
-<div class="container os-title-container mb-1">
-    <div class="heading-title w-50 mx-auto">
-        <h3 class="d-flex justify-content-center mx-auto">Software</h3>
-    </div>
-</div>
-
-@* OS content *@
-<div class="container os-container mb-4">
-    <div class="container d-flex justify-content-around">
-
-        @*Phone One*@
-        <div class="os-container-one w-25">
-            <p class="d-flex justify-content-center mx-auto">@Model.PhoneOne.OS</p>
-        </div>
-
-        @* Description *@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center mx-auto">Operating System</p>
-        </div>
-
-        @*Phone Two*@
-        <div class="os-container-two w-25">
-            <p class="d-flex justify-content-center mx-auto">@Model.PhoneTwo.OS</p>
-        </div>
-    </div>
-</div>
-
-
-
-@* Display Heading *@
-<div class="container display-title-container mb-1">
-    <div class="heading-title w-50 mx-auto">
-        <h3 class="d-flex justify-content-center mx-auto">Display</h3>
-    </div>
-</div>
-
-@* Display content *@
-<div class="container display-container mb-4">
-
-    @* Display Size *@
-    <div class="container d-flex justify-content-around">
+    @* Phone Image *@
+    <div class="container phone-image-container d-flex justify-content-around mb-lg-5 mt-lg-5">
 
         @* Phone One *@
-        <div class="display-size-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.DisplaySize</p>
+        <div id="compare-image-one" class="w-25 h-75 d-inline-block">
+            <img src="@Model.PhoneOne.PhoneURL" class="img-fluid rounded d-flex justify-content-center mx-auto " alt="...">
         </div>
 
-        @*Description*@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Display Size</p>
-        </div>
+        @* Divider *@
+        <div class="w-25 h-75 d-inline-block">   </div>
 
         @* Phone Two *@
-        <div class="display-size-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.DisplaySize</p>
+        <div id="compare-image-two" class="w-25 h-75 d-inline-block">
+            <img src="@Model.PhoneTwo.PhoneURL" class="img-fluid rounded d-flex justify-content-center mx-auto" alt="...">
+
+        </div>
+
+    </div>
+
+    @* OS Heading *@
+    <div class="container os-title-container mb-1">
+        <div class="heading-title w-50 mx-auto">
+            <h3 class="d-flex justify-content-center mx-auto">Software</h3>
         </div>
     </div>
 
-    @* Display Type *@
-    <div class="container d-flex justify-content-around">
+    @* OS content *@
+    <div class="container os-container mb-4">
+        <div class="container d-flex justify-content-around">
 
-        @*Phone One*@
-        <div class="display-type-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.DisplayType</p>
-        </div>
+            @*Phone One*@
+            <div class="os-container-one w-25">
+                <p class="d-flex justify-content-center mx-auto">@Model.PhoneOne.OS</p>
+            </div>
 
-        @*Description*@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Display Type</p>
-        </div>
+            @* Description *@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center mx-auto">Operating System</p>
+            </div>
 
-        @*Phone Two*@
-        <div class="display-type-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.DisplayType</p>
-        </div>
-    </div>
-
-    @* Refresh Rate *@
-    <div class="container d-flex justify-content-around">
-
-        @*Phone One*@
-        <div class="refresh-rate-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.RefreshRate</p>
-        </div>
-
-        @*Description*@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Refresh Rate</p>
-        </div>
-
-        @*Phone Two*@
-        <div class="refresh-rate-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.RefreshRate</p>
-        </div>
-    </div>
-</div>
-
-@* Specs Heading *@
-<div class="container display-title-container mb-1">
-    <div class="heading-title w-50 mx-auto">
-        <h3 class="d-flex justify-content-center mx-auto">Hardware Specs</h3>
-    </div>
-</div>
-
-@* Specs content *@
-<div class="container display-container mb-4">
-
-    @*Processor*@
-    <div class="container d-flex justify-content-around">
-
-        @* Phone One *@
-        <div class="processor-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.Processor</p>
-        </div>
-
-        @*Description*@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Processor</p>
-        </div>
-
-        @* Phone Two *@
-        <div class="processor-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.Processor</p>
+            @*Phone Two*@
+            <div class="os-container-two w-25">
+                <p class="d-flex justify-content-center mx-auto">@Model.PhoneTwo.OS</p>
+            </div>
         </div>
     </div>
 
-    @* Ram *@
-    <div class="container d-flex justify-content-around">
 
-        @* Phone One *@
-        <div class="ram-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.Ram</p>
-        </div>
 
-        @*Description*@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Ram</p>
-        </div>
-
-        @* Phone Two *@
-        <div class="ram-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.Ram</p>
+    @* Display Heading *@
+    <div class="container display-title-container mb-1">
+        <div class="heading-title w-50 mx-auto">
+            <h3 class="d-flex justify-content-center mx-auto">Display</h3>
         </div>
     </div>
 
-    @* Battery *@
-    <div class="container d-flex justify-content-around">
+    @* Display content *@
+    <div class="container display-container mb-4">
 
-        @* Phone One *@
-        <div class="battery-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.Battery</p>
+        @* Display Size *@
+        <div class="container d-flex justify-content-around">
+
+            @* Phone One *@
+            <div class="display-size-container-one w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneOne.DisplaySize</p>
+            </div>
+
+            @*Description*@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center">Display Size</p>
+            </div>
+
+            @* Phone Two *@
+            <div class="display-size-container-two w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneTwo.DisplaySize</p>
+            </div>
         </div>
 
-        @*Description*@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Battery</p>
+        @* Display Type *@
+        <div class="container d-flex justify-content-around">
+
+            @*Phone One*@
+            <div class="display-type-container-one w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneOne.DisplayType</p>
+            </div>
+
+            @*Description*@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center">Display Type</p>
+            </div>
+
+            @*Phone Two*@
+            <div class="display-type-container-two w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneTwo.DisplayType</p>
+            </div>
         </div>
 
-        @* Phone Two *@
-        <div class="battery-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.Battery</p>
-        </div>
-    </div>
+        @* Refresh Rate *@
+        <div class="container d-flex justify-content-around">
 
-    @* Wireless Charge *@
-    <div class="container d-flex justify-content-around">
+            @*Phone One*@
+            <div class="refresh-rate-container-one w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneOne.RefreshRate</p>
+            </div>
 
-        @* Phone One *@
-        <div class="iswireless-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.isWirelessCharge</p>
-        </div>
+            @*Description*@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center">Refresh Rate</p>
+            </div>
 
-        @*Description*@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Wireless Charge</p>
-        </div>
-
-        @* Phone Two *@
-        <div class="iswireless-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.isWirelessCharge</p>
-        </div>
-    </div>
-
-    @* Water Resist *@
-    <div class="container d-flex justify-content-around">
-
-        @* Phone One *@
-        <div class="iswater-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.isWaterResist</p>
-        </div>
-
-        @*Description*@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Water Resistant</p>
-        </div>
-
-        @* Phone Two *@
-        <div class="iswater-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.isWaterResist</p>
-        </div>
-    </div>
-</div>
-
-@* Camera Heading *@
-<div class="container camera-title-container mb-1">
-    <div class="heading-title w-50 mx-auto">
-        <h3 class="d-flex justify-content-center mx-auto">Camera</h3>
-    </div>
-</div>
-
-@* Camera content *@
-<div class="container camera-container mb-4">
-
-    @* Main Cam *@
-    <div class="container d-flex justify-content-around">
-
-        @* Phone One *@
-        <div class="main-camera-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.MainCam</p>
-        </div>
-
-        @*Description*@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Main Camera</p>
-        </div>
-
-        @* Phone Two *@
-        <div class="main-camera-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.MainCam</p>
+            @*Phone Two*@
+            <div class="refresh-rate-container-two w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneTwo.RefreshRate</p>
+            </div>
         </div>
     </div>
 
-    @* Secondary Cam *@
-    <div class="container d-flex justify-content-around">
-
-        @* Phone One *@
-        <div class="sec-cam-container-one w-25">
-            <p class="d-flex justify-content-center mx-auto">@Model.PhoneOne.SecondaryCam</p>
-        </div>
-
-        @*Description*@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center mx-auto">Secondary Camera</p>
-        </div>
-
-        @* Phone Two *@
-        <div class="sec-cam-container-two w-25">
-            <p class="d-flex justify-content-center mx-auto">@Model.PhoneTwo.SecondaryCam</p>
+    @* Specs Heading *@
+    <div class="container display-title-container mb-1">
+        <div class="heading-title w-50 mx-auto">
+            <h3 class="d-flex justify-content-center mx-auto">Hardware Specs</h3>
         </div>
     </div>
 
-    @* Front Cam *@
-    <div class="container d-flex justify-content-around">
+    @* Specs content *@
+    <div class="container display-container mb-4">
 
-        @* Phone One *@
-        <div class="front-cam-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.FrontCam</p>
+        @*Processor*@
+        <div class="container d-flex justify-content-around">
+
+            @* Phone One *@
+            <div class="processor-container-one w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneOne.Processor</p>
+            </div>
+
+            @*Description*@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center">Processor</p>
+            </div>
+
+            @* Phone Two *@
+            <div class="processor-container-two w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneTwo.Processor</p>
+            </div>
         </div>
 
-        @*Description*@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Front Camera</p>
+        @* Ram *@
+        <div class="container d-flex justify-content-around">
+
+            @* Phone One *@
+            <div class="ram-container-one w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneOne.Ram</p>
+            </div>
+
+            @*Description*@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center">Ram</p>
+            </div>
+
+            @* Phone Two *@
+            <div class="ram-container-two w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneTwo.Ram</p>
+            </div>
         </div>
 
-        @* Phone Two *@
-        <div class="front-cam-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.FrontCam</p>
+        @* Battery *@
+        <div class="container d-flex justify-content-around">
+
+            @* Phone One *@
+            <div class="battery-container-one w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneOne.Battery</p>
+            </div>
+
+            @*Description*@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center">Battery</p>
+            </div>
+
+            @* Phone Two *@
+            <div class="battery-container-two w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneTwo.Battery</p>
+            </div>
+        </div>
+
+        @* Wireless Charge *@
+        <div class="container d-flex justify-content-around">
+
+            @* Phone One *@
+            <div class="iswireless-container-one w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneOne.isWirelessCharge</p>
+            </div>
+
+            @*Description*@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center">Wireless Charge</p>
+            </div>
+
+            @* Phone Two *@
+            <div class="iswireless-container-two w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneTwo.isWirelessCharge</p>
+            </div>
+        </div>
+
+        @* Water Resist *@
+        <div class="container d-flex justify-content-around">
+
+            @* Phone One *@
+            <div class="iswater-container-one w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneOne.isWaterResist</p>
+            </div>
+
+            @*Description*@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center">Water Resistant</p>
+            </div>
+
+            @* Phone Two *@
+            <div class="iswater-container-two w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneTwo.isWaterResist</p>
+            </div>
         </div>
     </div>
-</div>
 
-@* Security Heading *@
-<div class="container camera-title-container mb-1">
-    <div class="heading-title w-50 mx-auto">
-        <h3 class="d-flex justify-content-center mx-auto">Security</h3>
+    @* Camera Heading *@
+    <div class="container camera-title-container mb-1">
+        <div class="heading-title w-50 mx-auto">
+            <h3 class="d-flex justify-content-center mx-auto">Camera</h3>
+        </div>
     </div>
-</div>
 
-@* Security content *@
-<div class="container camera-container mb-4">
-    <div class="container d-flex justify-content-around">
+    @* Camera content *@
+    <div class="container camera-container mb-4">
 
-        @* Phone One *@
-        <div class="security-container-one w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneOne.Security</p>
+        @* Main Cam *@
+        <div class="container d-flex justify-content-around">
+
+            @* Phone One *@
+            <div class="main-camera-container-one w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneOne.MainCam</p>
+            </div>
+
+            @*Description*@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center">Main Camera</p>
+            </div>
+
+            @* Phone Two *@
+            <div class="main-camera-container-two w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneTwo.MainCam</p>
+            </div>
         </div>
 
-        @*Description*@
-        <div class="os-descrip-container-one font-weight-light w-25">
-            <p class="d-flex justify-content-center">Type</p>
+        @* Secondary Cam *@
+        <div class="container d-flex justify-content-around">
+
+            @* Phone One *@
+            <div class="sec-cam-container-one w-25">
+                <p class="d-flex justify-content-center mx-auto">@Model.PhoneOne.SecondaryCam</p>
+            </div>
+
+            @*Description*@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center mx-auto">Secondary Camera</p>
+            </div>
+
+            @* Phone Two *@
+            <div class="sec-cam-container-two w-25">
+                <p class="d-flex justify-content-center mx-auto">@Model.PhoneTwo.SecondaryCam</p>
+            </div>
         </div>
 
-        @* Phone Two *@
-        <div class="security-container-two w-25">
-            <p class="d-flex justify-content-center">@Model.PhoneTwo.Security</p>
+        @* Front Cam *@
+        <div class="container d-flex justify-content-around">
+
+            @* Phone One *@
+            <div class="front-cam-container-one w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneOne.FrontCam</p>
+            </div>
+
+            @*Description*@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center">Front Camera</p>
+            </div>
+
+            @* Phone Two *@
+            <div class="front-cam-container-two w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneTwo.FrontCam</p>
+            </div>
+        </div>
+    </div>
+
+    @* Security Heading *@
+    <div class="container camera-title-container mb-1">
+        <div class="heading-title w-50 mx-auto">
+            <h3 class="d-flex justify-content-center mx-auto">Security</h3>
+        </div>
+    </div>
+
+    @* Security content *@
+    <div class="container camera-container mb-4">
+        <div class="container d-flex justify-content-around">
+
+            @* Phone One *@
+            <div class="security-container-one w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneOne.Security</p>
+            </div>
+
+            @*Description*@
+            <div class="os-descrip-container-one font-weight-light w-25">
+                <p class="d-flex justify-content-center">Type</p>
+            </div>
+
+            @* Phone Two *@
+            <div class="security-container-two w-25">
+                <p class="d-flex justify-content-center">@Model.PhoneTwo.Security</p>
+            </div>
         </div>
     </div>
 </div>

@@ -53,9 +53,13 @@ namespace PhoneSmart.Controllers
         //Compare Dropdown One
         public async Task<IActionResult> CompareViewOne(int id)
         {
-            List<PhoneModel> firstComparedPhone = await _context.PhoneModel
-                .Where(p => p.PhoneModelId == id)
-                .ToListAsync();
+            //List<PhoneModel> firstComparedPhone = await _context.PhoneModel
+            //    .Where(p => p.PhoneModelId == id)
+            //    .ToListAsync();
+
+            var firstComparedPhone = await _context.PhoneModel
+                .FirstOrDefaultAsync(m => m.PhoneModelId == id);
+
 
             return Ok(firstComparedPhone);
         }

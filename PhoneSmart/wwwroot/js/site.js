@@ -6,13 +6,12 @@
 // Phone One
 
 // Phone One Image
-const PhoneOneImage = singlePhone => {
-    return `<img id="compare-image" src="${singlePhone.phoneURL}" class="img-fluid rounded d-flex justify-content-center mx-auto " alt="...">`
+const PhoneImages = singlePhone => {
+    return `<img src="${singlePhone.phoneURL}" class="img-fluid rounded d-flex justify-content-center mx-auto " alt="...">`
 }
 
 // Dropdown One
 document.getElementById('dropdown-one').addEventListener('change', function () {
-    console.log('You selected: ', event.target.value);
 
     fetch(`/PhoneModels/CompareViewOne/${event.target.value}`)
         .then(r => r.json())
@@ -20,10 +19,21 @@ document.getElementById('dropdown-one').addEventListener('change', function () {
 
             console.log(phoneforCompareOne)
 
-            document.querySelector("#compare-image").innerHTML = PhoneOneImage(phoneforCompareOne);
+            // Phone Images
+            document.querySelector("#compare-image-one").innerHTML = PhoneImages(phoneforCompareOne);
         })
 });
 // Dropdown Two
 document.getElementById('dropdown-two').addEventListener('change', function () {
-    console.log('You selected: ', event.target.value);
+
+    fetch(`/PhoneModels/CompareViewOne/${event.target.value}`)
+        .then(r => r.json())
+        .then((phoneforCompareTwo) => {
+
+
+            // Phone Images
+            document.querySelector("#compare-image-two").innerHTML = PhoneImages(phoneforCompareTwo);
+        })
+
+
 });
