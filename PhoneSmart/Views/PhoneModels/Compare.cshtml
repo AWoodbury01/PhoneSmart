@@ -8,7 +8,6 @@
     </div>*@
 @*<hr />*@
 
-
 @* Heading *@
 <div class="container heading-container">
     <div class="heading-title w-50 mx-auto mt-5 mb-5">
@@ -28,15 +27,17 @@
 
     @* Dropdown Phone Two *@
     <div id="dropdown-two" class="btn-group w-35">
-        <select class="btn btn-secondary btn-lg dropdown-toggle" asp-for="PhoneOne.PhoneModelId" asp-items="@Model.PhoneDropdownOne" aria-haspopup="true" aria-expanded="false"></select>
+        <select class="btn btn-secondary btn-lg dropdown-toggle" asp-for="PhoneTwo.PhoneModelId" asp-items="@Model.PhoneDropdownTwo" aria-haspopup="true" aria-expanded="false"></select>
     </div>
 </div>
+
+
 
 @* Phone Image *@
 <div class="container phone-image-container d-flex justify-content-around mb-lg-5 mt-lg-5">
 
     @* Phone One *@
-    <div class="w-25 h-75 d-inline-block">
+    <div id="compare-image-one" class="w-25 h-75 d-inline-block">
         <img src="@Model.PhoneOne.PhoneURL" class="img-fluid rounded d-flex justify-content-center mx-auto " alt="...">
     </div>
 
@@ -44,7 +45,7 @@
     <div class="w-25 h-75 d-inline-block">   </div>
 
     @* Phone Two *@
-    <div class="w-25 h-75 d-inline-block">
+    <div id="compare-image-two" class="w-25 h-75 d-inline-block">
         <img src="@Model.PhoneTwo.PhoneURL" class="img-fluid rounded d-flex justify-content-center mx-auto" alt="...">
 
     </div>
@@ -63,7 +64,7 @@
     <div class="container d-flex justify-content-around">
 
         @*Phone One*@
-        <div class="os-container-one w-25">
+        <div id="compare-os-one" class="os-container-one w-25">
             <p class="d-flex justify-content-center mx-auto">@Model.PhoneOne.OS</p>
         </div>
 
@@ -73,7 +74,7 @@
         </div>
 
         @*Phone Two*@
-        <div class="os-container-two w-25">
+        <div id="compare-os-two" class="os-container-two w-25">
             <p class="d-flex justify-content-center mx-auto">@Model.PhoneTwo.OS</p>
         </div>
     </div>
@@ -95,7 +96,7 @@
     <div class="container d-flex justify-content-around">
 
         @* Phone One *@
-        <div class="display-size-container-one w-25">
+        <div id="compare-display-size-one" class="display-size-container-one w-25">
             <p class="d-flex justify-content-center">@Model.PhoneOne.DisplaySize</p>
         </div>
 
@@ -105,7 +106,7 @@
         </div>
 
         @* Phone Two *@
-        <div class="display-size-container-two w-25">
+        <div id="compare-display-size-two" class="display-size-container-two w-25">
             <p class="d-flex justify-content-center">@Model.PhoneTwo.DisplaySize</p>
         </div>
     </div>
@@ -114,7 +115,7 @@
     <div class="container d-flex justify-content-around">
 
         @*Phone One*@
-        <div class="display-type-container-one w-25">
+        <div id="compare-display-type-one" class="display-type-container-one w-25">
             <p class="d-flex justify-content-center">@Model.PhoneOne.DisplayType</p>
         </div>
 
@@ -124,7 +125,7 @@
         </div>
 
         @*Phone Two*@
-        <div class="display-type-container-two w-25">
+        <div id="compare-display-type-two" class="display-type-container-two w-25">
             <p class="d-flex justify-content-center">@Model.PhoneTwo.DisplayType</p>
         </div>
     </div>
@@ -133,7 +134,7 @@
     <div class="container d-flex justify-content-around">
 
         @*Phone One*@
-        <div class="refresh-rate-container-one w-25">
+        <div id="compare-refresh-rate-one" class="refresh-rate-container-one w-25">
             <p class="d-flex justify-content-center">@Model.PhoneOne.RefreshRate</p>
         </div>
 
@@ -143,7 +144,7 @@
         </div>
 
         @*Phone Two*@
-        <div class="refresh-rate-container-two w-25">
+        <div id="compare-refresh-rate-two" class="refresh-rate-container-two w-25">
             <p class="d-flex justify-content-center">@Model.PhoneTwo.RefreshRate</p>
         </div>
     </div>
@@ -163,7 +164,7 @@
     <div class="container d-flex justify-content-around">
 
         @* Phone One *@
-        <div class="processor-container-one w-25">
+        <div id="compare-phone-processor-one" class="processor-container-one w-25">
             <p class="d-flex justify-content-center">@Model.PhoneOne.Processor</p>
         </div>
 
@@ -173,7 +174,7 @@
         </div>
 
         @* Phone Two *@
-        <div class="processor-container-two w-25">
+        <div id="compare-phone-processor-two" class="processor-container-two w-25">
             <p class="d-flex justify-content-center">@Model.PhoneTwo.Processor</p>
         </div>
     </div>
@@ -182,7 +183,7 @@
     <div class="container d-flex justify-content-around">
 
         @* Phone One *@
-        <div class="ram-container-one w-25">
+        <div id="compare-ram-one" class="ram-container-one w-25">
             <p class="d-flex justify-content-center">@Model.PhoneOne.Ram</p>
         </div>
 
@@ -192,7 +193,7 @@
         </div>
 
         @* Phone Two *@
-        <div class="ram-container-two w-25">
+        <div id="compare-ram-two" class="ram-container-two w-25">
             <p class="d-flex justify-content-center">@Model.PhoneTwo.Ram</p>
         </div>
     </div>
@@ -201,7 +202,7 @@
     <div class="container d-flex justify-content-around">
 
         @* Phone One *@
-        <div class="battery-container-one w-25">
+        <div id="compare-battery-one" class="battery-container-one w-25">
             <p class="d-flex justify-content-center">@Model.PhoneOne.Battery</p>
         </div>
 
@@ -211,7 +212,7 @@
         </div>
 
         @* Phone Two *@
-        <div class="battery-container-two w-25">
+        <div id="compare-battery-two" class="battery-container-two w-25">
             <p class="d-flex justify-content-center">@Model.PhoneTwo.Battery</p>
         </div>
     </div>
@@ -220,7 +221,7 @@
     <div class="container d-flex justify-content-around">
 
         @* Phone One *@
-        <div class="iswireless-container-one w-25">
+        <div id="compare-wireless-charge-one" class="iswireless-container-one w-25">
             <p class="d-flex justify-content-center">@Model.PhoneOne.isWirelessCharge</p>
         </div>
 
@@ -230,7 +231,7 @@
         </div>
 
         @* Phone Two *@
-        <div class="iswireless-container-two w-25">
+        <div id="compare-wireless-charge-two" class="iswireless-container-two w-25">
             <p class="d-flex justify-content-center">@Model.PhoneTwo.isWirelessCharge</p>
         </div>
     </div>
@@ -239,7 +240,7 @@
     <div class="container d-flex justify-content-around">
 
         @* Phone One *@
-        <div class="iswater-container-one w-25">
+        <div id="compare-water-one" class="iswater-container-one w-25">
             <p class="d-flex justify-content-center">@Model.PhoneOne.isWaterResist</p>
         </div>
 
@@ -249,7 +250,7 @@
         </div>
 
         @* Phone Two *@
-        <div class="iswater-container-two w-25">
+        <div id="compare-water-two" class="iswater-container-two w-25">
             <p class="d-flex justify-content-center">@Model.PhoneTwo.isWaterResist</p>
         </div>
     </div>
@@ -269,7 +270,7 @@
     <div class="container d-flex justify-content-around">
 
         @* Phone One *@
-        <div class="main-camera-container-one w-25">
+        <div id="compare-main-one" class="main-camera-container-one w-25">
             <p class="d-flex justify-content-center">@Model.PhoneOne.MainCam</p>
         </div>
 
@@ -279,7 +280,7 @@
         </div>
 
         @* Phone Two *@
-        <div class="main-camera-container-two w-25">
+        <div id="compare-main-two" class="main-camera-container-two w-25">
             <p class="d-flex justify-content-center">@Model.PhoneTwo.MainCam</p>
         </div>
     </div>
@@ -288,7 +289,7 @@
     <div class="container d-flex justify-content-around">
 
         @* Phone One *@
-        <div class="sec-cam-container-one w-25">
+        <div id="compare-secondary-one" class="sec-cam-container-one w-25">
             <p class="d-flex justify-content-center mx-auto">@Model.PhoneOne.SecondaryCam</p>
         </div>
 
@@ -298,7 +299,7 @@
         </div>
 
         @* Phone Two *@
-        <div class="sec-cam-container-two w-25">
+        <div id="compare-secondary-two" class="sec-cam-container-two w-25">
             <p class="d-flex justify-content-center mx-auto">@Model.PhoneTwo.SecondaryCam</p>
         </div>
     </div>
@@ -307,7 +308,7 @@
     <div class="container d-flex justify-content-around">
 
         @* Phone One *@
-        <div class="front-cam-container-one w-25">
+        <div id="compare-front-one" class="front-cam-container-one w-25">
             <p class="d-flex justify-content-center">@Model.PhoneOne.FrontCam</p>
         </div>
 
@@ -317,7 +318,7 @@
         </div>
 
         @* Phone Two *@
-        <div class="front-cam-container-two w-25">
+        <div id="compare-front-two" class="front-cam-container-two w-25">
             <p class="d-flex justify-content-center">@Model.PhoneTwo.FrontCam</p>
         </div>
     </div>
@@ -335,7 +336,7 @@
     <div class="container d-flex justify-content-around">
 
         @* Phone One *@
-        <div class="security-container-one w-25">
+        <div id="compare-security-one" class="security-container-one w-25">
             <p class="d-flex justify-content-center">@Model.PhoneOne.Security</p>
         </div>
 
@@ -345,7 +346,7 @@
         </div>
 
         @* Phone Two *@
-        <div class="security-container-two w-25">
+        <div id="compare-security-two" class="security-container-two w-25">
             <p class="d-flex justify-content-center">@Model.PhoneTwo.Security</p>
         </div>
     </div>

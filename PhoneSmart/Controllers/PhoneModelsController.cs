@@ -30,6 +30,7 @@ namespace PhoneSmart.Controllers
             return View(await _context.PhoneModel.ToListAsync());
         }
 
+        //Compare
         public async Task<IActionResult> Compare()
         {
 
@@ -43,11 +44,25 @@ namespace PhoneSmart.Controllers
 
 
             vm.PhoneOne = comparePhones[0];
-            vm.PhoneTwo = comparePhones[1];
+            vm.PhoneTwo = comparePhones[3];
 
             return View(vm);
         }
 
+
+        //Compare Dropdown One
+        public async Task<IActionResult> CompareViewOne(int id)
+        {
+            //List<PhoneModel> firstComparedPhone = await _context.PhoneModel
+            //    .Where(p => p.PhoneModelId == id)
+            //    .ToListAsync();
+
+            var ComparedPhone = await _context.PhoneModel
+            .FirstOrDefaultAsync(m => m.PhoneModelId == id);
+
+
+            return Ok(ComparedPhone);
+        }
 
         // GET: PhoneModels/Details/5
         public async Task<IActionResult> Details(int? id)
