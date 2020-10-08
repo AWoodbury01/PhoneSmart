@@ -57,11 +57,11 @@ namespace PhoneSmart.Controllers
             //    .Where(p => p.PhoneModelId == id)
             //    .ToListAsync();
 
-            var firstComparedPhone = await _context.PhoneModel
-                .FirstOrDefaultAsync(m => m.PhoneModelId == id);
+            var ComparedPhone = await _context.PhoneModel
+            .FirstOrDefaultAsync(m => m.PhoneModelId == id);
 
 
-            return Ok(firstComparedPhone);
+            return Ok(ComparedPhone);
         }
 
         // GET: PhoneModels/Details/5
