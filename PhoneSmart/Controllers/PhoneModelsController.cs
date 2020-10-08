@@ -44,7 +44,7 @@ namespace PhoneSmart.Controllers
 
 
             vm.PhoneOne = comparePhones[0];
-            vm.PhoneTwo = comparePhones[4];
+            vm.PhoneTwo = comparePhones[3];
 
             return View(vm);
         }
