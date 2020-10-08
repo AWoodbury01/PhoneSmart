@@ -7,7 +7,7 @@
 
 // Phone One Image
 const PhoneImages = singlePhone => {
-    return `<img src="${singlePhone.phoneURL}" class="img-fluid rounded d-flex justify-content-center mx-auto " alt="...">`
+    return `<img src="${singlePhone.phoneURL}" class="img-fluid rounded d-flex justify-content-center mx-auto " alt="..." style=" object-fit: fill;">`
 }
 // Phone One OS
 const PhoneOS = singlePhone => {
