@@ -85,7 +85,7 @@ namespace PhoneSmart.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PhoneId,UserId,Color,Storage,Condition,PhoneModelId")] Phone phone)
+        public async Task<IActionResult> Create([Bind("PhoneId,UserId,Color,Storage,Condition,PhoneModelId,Price")] Phone phone)
         {
             ModelState.Remove("User");
             ModelState.Remove("UserId");
@@ -122,7 +122,7 @@ namespace PhoneSmart.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PhoneId,UserId,Color,Storage,Condition,PhoneModelId")] Phone phone)
+        public async Task<IActionResult> Edit(int id, [Bind("PhoneId,UserId,Color,Storage,Condition,PhoneModelId,Price")] Phone phone)
         {
             if (id != phone.PhoneId)
             {

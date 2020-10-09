@@ -10,18 +10,18 @@
 </div>
 
 @* Create & Search *@
-<div class="container d-flex justify-content-between mb-5">
+<div class="container d-flex align-items-center justify-content-between mb-5">
     <div>
         <p>
-            <i class="fas fa-mobile-alt"></i>
-            <a asp-action="Create">Post New Phone</a>
+            <i class="fas fa-mobile-alt fa-2x"></i>
+            <a class="text-dark h6" asp-action="Create">Post New Phone</a>
         </p>
     </div>
 
     <div>
         <form asp-action="Index" method="get">
-            <div class="form-actions no-color">
-                <p>
+            <div class="no-color">
+                <p class="h6">
                     Search by Phone <input class="form-control form-control-sm"
                                            type="text"
                                            name="SearchString"
@@ -38,26 +38,26 @@
 <div class="container d-flex justify-content-md-around flex-wrap h-100" style="">
     @foreach (var item in Model)
     {@* Test card *@
-                    <div class="card shadow-lg" style="width: 24rem; height: 19rem;">
+                    <div class="card shadow-lg" style="width: 24rem; height: 19.5rem;">
                         <div class="card-content">
                             <div class="card-body">
-                                <div class="media d-flex">
+                                <div class="media d-flex mb-sm-1">
                                     <div class="align-self-center h-75 w-25">
                                         <img class="float-left" style="
-                                            height: 12rem; width: 6.5rem;
+                                            height: 11.7rem; width: 6rem;
                                             " src="@item.PhoneModel.PhoneURL" alt="Alternate Text" />
                                     </div>
                                     <div class="media-body text-right">
-                                        <h3>64.89 %</h3>
+                                        <h3>$@Html.DisplayFor(modelItem => item.Price)</h3>
                                         <span>@item.PhoneModel.Manufacturer</span>
                                         <span>@item.PhoneModel.Model</span>
                                     </div>
                                 </div>
                                 @* Edit Details Delete *@
-                                <div class=" card-footer justify-content-center">
-                                    <a class="card-link" asp-action="Edit" asp-route-id="@item.PhoneId">Edit</a>
-                                    <a class="card-link" asp-action="Details" asp-route-id="@item.PhoneId">Details</a>
-                                    <a class="card-link" asp-action="Delete" asp-route-id="@item.PhoneId">Delete</a>
+                                <div class=" card-footer d-flex justify-content-center">
+                                    <a class="card-link text-dark" asp-action="Edit" asp-route-id="@item.PhoneId">Edit</a>
+                                    <a class="card-link text-dark" asp-action="Details" asp-route-id="@item.PhoneId">Details</a>
+                                    <a class="card-link text-dark" asp-action="Delete" asp-route-id="@item.PhoneId">Delete</a>
                                 </div>
 
                             </div>
