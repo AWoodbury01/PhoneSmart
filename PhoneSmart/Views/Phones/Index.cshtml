@@ -5,7 +5,7 @@
 @* Heading *@
 <div class="container heading-container">
     <div class="heading-title w-50 mx-auto mt-5 mb-5">
-        <h1 class="d-flex justify-content-center mx-auto">Phones</h1>
+        <h1 class="d-flex justify-content-center mx-auto display-4 font-weight-light">Phones</h1>
     </div>
 </div>
 
@@ -13,9 +13,11 @@
 <div class="container d-flex justify-content-between mb-5">
     <div>
         <p>
+            <i class="fas fa-mobile-alt"></i>
             <a asp-action="Create">Post New Phone</a>
         </p>
     </div>
+
     <div>
         <form asp-action="Index" method="get">
             <div class="form-actions no-color">
@@ -33,42 +35,33 @@
 
 
 @* Posts *@
-<div class="container d-flex justify-content-around flex-wrap w-75" style="        height: auto;
-  position: relative;
-">
+<div class="container d-flex justify-content-md-around flex-wrap h-100" style="">
     @foreach (var item in Model)
-    {
+    {@* Test card *@
+                    <div class="card shadow-lg" style="width: 24rem; height: 19rem;">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="media d-flex">
+                                    <div class="align-self-center h-75 w-25">
+                                        <img class="float-left" style="
+                                            height: 12rem; width: 6.5rem;
+                                            " src="@item.PhoneModel.PhoneURL" alt="Alternate Text" />
+                                    </div>
+                                    <div class="media-body text-right">
+                                        <h3>64.89 %</h3>
+                                        <span>@item.PhoneModel.Manufacturer</span>
+                                        <span>@item.PhoneModel.Model</span>
+                                    </div>
+                                </div>
+                                @* Edit Details Delete *@
+                                <div class=" card-footer justify-content-center">
+                                    <a class="card-link" asp-action="Edit" asp-route-id="@item.PhoneId">Edit</a>
+                                    <a class="card-link" asp-action="Details" asp-route-id="@item.PhoneId">Details</a>
+                                    <a class="card-link" asp-action="Delete" asp-route-id="@item.PhoneId">Delete</a>
+                                </div>
 
+                            </div>
+                        </div>
 
-<div class="card mb-lg-5" style="width: 18rem; height: 26rem;">
-    @* Phone Image *@
-    <div class="post-card-image-container"
-         style="        width: 18rem;
-        height: 8rem;
-        overflow: hidden;
-    ">
-        <img style="
-
-            "
-             class="card-img-top "
-             src="@item.PhoneModel.PhoneURL"
-             alt="Card image cap">
-    </div>
-
-    @* Post Body *@
-    <div class="card-body">
-        <h5 class="card-title">User: @Html.DisplayFor(modelItem => item.PhoneModel.Manufacturer)  @Html.DisplayFor(modelItem => item.PhoneModel.Model)</h5>
-        <p class="card-text">@Html.DisplayFor(modelItem => item.User.FirstName)</p>
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">@Html.DisplayNameFor(model => model.Color): @Html.DisplayFor(modelItem => item.Color)</li>
-        <li class="list-group-item">@Html.DisplayNameFor(model => model.Storage): @Html.DisplayFor(modelItem => item.Storage)</li>
-        <li class="list-group-item">@Html.DisplayNameFor(model => model.Condition): @Html.DisplayFor(modelItem => item.Condition)</li>
-    </ul>
-    <div class="card-body d-flex justify-content-center">
-        <a class="card-link" asp-action="Edit" asp-route-id="@item.PhoneId">Edit</a>
-        <a class="card-link" asp-action="Details" asp-route-id="@item.PhoneId">Details</a>
-        <a class="card-link" asp-action="Delete" asp-route-id="@item.PhoneId">Delete</a>
-    </div>
-</div>}
+                    </div>}
 </div>

@@ -7,7 +7,7 @@
 
 // Phone One Image
 const PhoneImages = singlePhone => {
-    return `<img src="${singlePhone.phoneURL}" class="img-fluid rounded d-flex justify-content-center mx-auto " alt="...">`
+    return `<img src="${singlePhone.phoneURL}" class="img-fluid rounded d-flex justify-content-center mx-auto img-thumbnail shadow-lg" alt="..." style=" object-fit: fill;">`
 }
 // Phone One OS
 const PhoneOS = singlePhone => {
@@ -24,6 +24,10 @@ const PhoneDisplayType = singlePhone => {
 // Phone One Refresh Rate
 const PhoneRefreshRate = singlePhone => {
     return `<p class="d-flex justify-content-center mx-auto">${singlePhone.refreshRate}</p>`
+}
+// Phone One Refresh Rate
+const PhoneProcessor = singlePhone => {
+    return `<p class="d-flex justify-content-center mx-auto">${singlePhone.processor}</p>`
 }
 // Phone One Ram
 const PhoneRam = singlePhone => {
@@ -78,7 +82,9 @@ document.getElementById('dropdown-one').addEventListener('change', function () {
             document.querySelector("#compare-display-type-one").innerHTML = PhoneDisplayType(phoneforCompareOne);
             // Phone Refresh Rate
             document.querySelector("#compare-refresh-rate-one").innerHTML = PhoneRefreshRate(phoneforCompareOne);
-            // Phone Refresh Rate
+            // Phone Processor
+            document.querySelector("#compare-phone-processor-one").innerHTML = PhoneProcessor(phoneforCompareOne);
+            // Phone Ram
             document.querySelector("#compare-ram-one").innerHTML = PhoneRam(phoneforCompareOne);
             // Phone Battery
             document.querySelector("#compare-battery-one").innerHTML = PhoneBattery(phoneforCompareOne);
@@ -117,6 +123,8 @@ document.getElementById('dropdown-two').addEventListener('change', function () {
             document.querySelector("#compare-refresh-rate-two").innerHTML = PhoneRefreshRate(phoneforCompareTwo);
             // Phone Refresh Rate
             document.querySelector("#compare-ram-two").innerHTML = PhoneRam(phoneforCompareTwo);
+            // Phone Processor
+            document.querySelector("#compare-phone-processor-two").innerHTML = PhoneProcessor(phoneforCompareTwo);
             // Phone Battery
             document.querySelector("#compare-battery-two").innerHTML = PhoneBattery(phoneforCompareTwo);
             // Phone Wireless Charge
