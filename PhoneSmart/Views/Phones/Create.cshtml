@@ -2,9 +2,9 @@
 
 @{ ViewData["Title"] = "Create"; }
 
-<h1>Post New Phone</h1>
+<h1>Post Your Phone</h1>
 
-<h4>Phone</h4>
+<h5>Enter details below</h5>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -13,6 +13,11 @@
             <div class="form-group">
                 <label asp-for="PhoneModelId" class="control-label"></label>
                 <select asp-for="PhoneModelId" class="form-control" asp-items="ViewBag.PhoneModelId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Color" class="control-label"></label>
