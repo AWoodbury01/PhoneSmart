@@ -19,7 +19,7 @@
 <div class="container dropdown-container d-flex justify-content-around mb-4">
     @* Dropdown Phone One *@
     <div id="dropdown-one" class="btn-group w-35">
-        <select class="btn btn-secondary btn-lg dropdown-toggle" asp-for="PhoneOne.PhoneModelId" asp-items="@Model.PhoneDropdownOne" aria-haspopup="true" aria-expanded="false"></select>
+        <select class="form-control dropdown-toggle btn-lg" asp-for="PhoneOne.PhoneModelId" asp-items="@Model.PhoneDropdownOne" aria-haspopup="true" aria-expanded="false"></select>
     </div>
 
     @* Divider *@
@@ -27,7 +27,7 @@
 
     @* Dropdown Phone Two *@
     <div id="dropdown-two" class="btn-group w-35">
-        <select class="btn btn-secondary btn-lg dropdown-toggle" asp-for="PhoneTwo.PhoneModelId" asp-items="@Model.PhoneDropdownTwo" aria-haspopup="true" aria-expanded="false"></select>
+        <select class="form-control dropdown-toggle btn-lg" asp-for="PhoneTwo.PhoneModelId" asp-items="@Model.PhoneDropdownTwo" aria-haspopup="true" aria-expanded="false"></select>
     </div>
 </div>
 
