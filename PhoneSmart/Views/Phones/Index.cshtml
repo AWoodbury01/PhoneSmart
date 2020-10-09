@@ -33,54 +33,28 @@
     </div>
 </div>
 
-@* Test card *@
-<div class="card shadow-lg w-25">
-    <div class="card-content">
-        <div class="card-body">
-            <div class="media d-flex">
-                <div class="align-self-center">
-                    <i class="icon-graph success font-large-2 float-left"></i>
-                    <i class="fab fa-bootstrap"></i>
-                    <i class="fa fa-heart"></i>
-                    <img src="#" alt="Alternate Text" />
-                </div>
-                <div class="media-body text-right">
-                    <h3>64.89 %</h3>
-                    <span>Bounce Rate</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 
 @* Posts *@
 <div class="container d-flex justify-content-md-around flex-wrap h-100" style="">
     @foreach (var item in Model)
     {@* Test card *@
-                    <div class="card shadow-lg" style="width: 26rem; height: 21.5rem;">
+                    <div class="card shadow-lg" style="width: 24rem; height: 19rem;">
                         <div class="card-content">
                             <div class="card-body">
                                 <div class="media d-flex">
                                     <div class="align-self-center h-75 w-25">
                                         <img class="float-left" style="
-                                            height: 5rem; width: 3rem;
+                                            height: 12rem; width: 6.5rem;
                                             " src="@item.PhoneModel.PhoneURL" alt="Alternate Text" />
                                     </div>
                                     <div class="media-body text-right">
                                         <h3>64.89 %</h3>
-                                        <span>Bounce Rate</span>
+                                        <span>@item.PhoneModel.Manufacturer</span>
+                                        <span>@item.PhoneModel.Model</span>
                                     </div>
                                 </div>
-                                @* Phone options *@
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Color: @Html.DisplayFor(modelItem => item.Color)</li>
-                                    <li class="list-group-item">Storage: @Html.DisplayFor(modelItem => item.Storage)</li>
-                                    <li class="list-group-item">Condition: @Html.DisplayFor(modelItem => item.Storage)</li>
-                                </ul>
                                 @* Edit Details Delete *@
-                                <div class="d-flex justify-content-center">
+                                <div class=" card-footer justify-content-center">
                                     <a class="card-link" asp-action="Edit" asp-route-id="@item.PhoneId">Edit</a>
                                     <a class="card-link" asp-action="Details" asp-route-id="@item.PhoneId">Details</a>
                                     <a class="card-link" asp-action="Delete" asp-route-id="@item.PhoneId">Delete</a>
