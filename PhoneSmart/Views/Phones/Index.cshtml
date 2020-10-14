@@ -12,7 +12,7 @@
 @* Create & Search *@
 <div class="container d-flex align-items-center justify-content-between mb-5">
     <div>
-        <p>
+        <p class="d-flex align-items-center">
             <i class="fas fa-mobile-alt fa-2x"></i>
             <a class="text-dark h6" asp-action="Create">Post New Phone</a>
         </p>
@@ -20,8 +20,8 @@
 
     <div>
         <form asp-action="Index" method="get">
-            <div class="no-color">
-                <p class="h6">
+            <div class="no-color d-flex justify-content-center">
+                <p class="h6 ">
                     Search by Phone <input class="form-control form-control-sm"
                                            type="text"
                                            name="SearchString"
