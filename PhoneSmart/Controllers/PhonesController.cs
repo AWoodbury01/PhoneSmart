@@ -161,6 +161,8 @@ namespace PhoneSmart.Controllers
             }
 
             var phone = await _context.Phone
+                .Include(p => p.PhoneModel)
+                .Include(p => p.User)
                 .FirstOrDefaultAsync(m => m.PhoneId == id);
             if (phone == null)
             {
