@@ -2,47 +2,63 @@
 
 @{ ViewData["Title"] = "Create"; }
 
-<h1>Post Your Phone</h1>
-
-<h5>Enter details below</h5>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="PhoneModelId" class="control-label"></label>
-                <select asp-for="PhoneModelId" class="form-control" asp-items="ViewBag.PhoneModelId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Color" class="control-label"></label>
-                <input asp-for="Color" class="form-control" />
-                <span asp-validation-for="Color" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Storage" class="control-label"></label>
-                <input asp-for="Storage" class="form-control" />
-                <span asp-validation-for="Storage" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Condition" class="control-label"></label>
-                <input asp-for="Condition" class="form-control" />
-                <span asp-validation-for="Condition" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+@* Heading *@
+<div class="container heading-container">
+    <div class="heading-title w-50 mx-auto mt-5 mb-5">
+        <h1 class="d-flex justify-content-center mx-auto display-4 font-weight-light">Post Your Phone</h1>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">
+                Enter Details Below
+            </h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="PhoneModelId" class="control-label"></label>
+                            <select asp-for="PhoneModelId" class="form-control" asp-items="ViewBag.PhoneModelId"></select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Price" class="control-label"></label>
+                            <input asp-for="Price" class="form-control" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Color" class="control-label"></label>
+                            <input asp-for="Color" class="form-control" />
+                            <span asp-validation-for="Color" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Storage" class="control-label"></label>
+                            <input asp-for="Storage" class="form-control" />
+                            <span asp-validation-for="Storage" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Condition" class="control-label"></label>
+                            <input asp-for="Condition" class="form-control" />
+                            <span asp-validation-for="Condition" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer">
+            <a asp-action="Index">Back to List</a>
+        </div>
+
+    </div>
+
 </div>
 
 @section Scripts {
